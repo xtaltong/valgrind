@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int x;
+    int x = 10;
     bool z;
     int y = x + 5;
     if (x) {
