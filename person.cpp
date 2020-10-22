@@ -6,8 +6,8 @@ using std::cout;
 using std::endl;
 
 Person::Person(char *name, Person* father, Person* mother){
-    this->name = new char[strlen(name)];
-    strcpy(this->name, name);
+    this->name = new char[strlen(name)+1]; //local to function, this->name refers to length of name
+    strcpy(this->name, name); //copies string from outside source name into destination this->name
     this->father = father;
     this->mother = mother;
     capacity = 1;
