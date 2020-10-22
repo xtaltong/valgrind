@@ -38,17 +38,19 @@ void PersonList::addPerson(char* child_name, char* father_name, char* mother_nam
       // father_name is not in the theList so create a new person
       father = new Person(father_name, 0, 0);
       insertIntoList(father);
+      delete[] children;
     }
     if(mother == 0){
       // mother_name is not in the theList so create a new person
       mother = new Person(mother_name, 0, 0);
       insertIntoList(mother);
+      delete[] children;
     }
     Person *newChild = new Person(child_name, father, mother);
     insertIntoList(newChild);
     father->addChild(newChild);
     mother->addChild(newChild);
-    delete[] Person;
+    delete newChild;
 }
 
 void PersonList::insertIntoList(Person *newPerson){
