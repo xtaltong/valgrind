@@ -17,7 +17,7 @@ Person::Person(char *name, Person* father, Person* mother){
 }
 
 Person::~Person(){
-    delete[] this->name;
+    delete[] name;
     delete[] children;
 }
 
