@@ -70,7 +70,6 @@ char* Person::compute_relation(int level){
         char *temp2 = new char[strlen("great ") + strlen(temp) + 1];
         strcat(strcpy(temp2, "great "), temp);
         temp = temp2;
-        delete[] temp2;
     }
 
     return temp;
